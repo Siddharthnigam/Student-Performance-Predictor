@@ -46,7 +46,7 @@ export default function PredictionForm() {
     };
     
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/predict/", submitData);
+      const res = await axios.post("https://student-performance-predictor-1-n1oy.onrender.com/api/predict/", submitData);
       setResult(res.data.prediction);
     } catch (err) {
       if (err.response?.data) {
