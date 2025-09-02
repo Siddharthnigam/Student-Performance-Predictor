@@ -1,8 +1,8 @@
 [phases.setup]
-nixPkgs = ['python39']
+nixPkgs = ['python39', 'pip']
 
 [phases.install]
-cmds = ['cd echopredict_backend && pip install -r requirements.txt']
+cmds = ['pip install -r requirements.txt']
 
 [phases.build]
 cmds = ['cd echopredict_backend && python manage.py collectstatic --noinput']
